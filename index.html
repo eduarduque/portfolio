@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eduardo Duque — Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Nav -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">ED</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle">&#9776;</button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <p class="hero-greeting">Hello, I'm</p>
+            <h1 class="hero-name">Eduardo Duque</h1>
+            <p class="hero-subtitle"><span id="typed-text"></span><span class="cursor">|</span></p>
+            <p class="hero-description">
+                CS student at Texas State University building AI tools and web applications.
+                Bilingual (English/Spanish) with 3+ years of experience bridging technology and people.
+            </p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
+            <div class="hero-social">
+                <a href="https://github.com/eduarduque" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.linkedin.com/in/eduardo-duque-b726021bb" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-grid">
+                <div class="about-photo">
+                    <img src="ResumePhoto.png" alt="Photo of Eduardo Duque" class="about-image">
+                </div>
+                <div class="about-text">
+                    <p>I'm a Sophomore at <strong>Texas State University</strong> pursuing a BS in Computer Science with an Engineering Technology minor. I'm a practical builder — I learn by making things that solve real problems.</p>
+                    <p>My flagship project is an <strong>AI-powered academic advisor</strong> built with the Claude API and a custom prerequisite graph engine — born from my own frustration with navigating a complex CS degree as a transfer student.</p>
+                    <p>I'm bilingual (English/Spanish) and have spent 3+ years working in people-facing, high-stakes roles in higher education — which means I build for real users, not just for demos.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">3.54</span>
+                            <span class="stat-label">GPA</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">66</span>
+                            <span class="stat-label">Credits</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">3+</span>
+                            <span class="stat-label">Yrs Experience</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">2</span>
+                            <span class="stat-label">Languages</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Programming</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">C++</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">HTML / CSS</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <h3>AI &amp; APIs</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Claude API</span>
+                        <span class="tag">Anthropic SDK</span>
+                        <span class="tag">NetworkX</span>
+                        <span class="tag">Prompt Engineering</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <h3>Tools &amp; Platforms</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Git &amp; GitHub</span>
+                        <span class="tag">Azure</span>
+                        <span class="tag">Microsoft 365</span>
+                        <span class="tag">VS Code</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <h3>Soft Skills</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Bilingual (EN/ES)</span>
+                        <span class="tag">Technical Communication</span>
+                        <span class="tag">Conflict Resolution</span>
+                        <span class="tag">Project Management</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+
+                <div class="project-card featured">
+                    <div class="project-header">
+                        <span class="project-badge">Featured</span>
+                        <a href="https://github.com/eduarduque" target="_blank" rel="noopener" class="project-link">GitHub &rarr;</a>
+                    </div>
+                    <h3>TXState AI Academic Advisor</h3>
+                    <p>
+                        A CLI chatbot that acts as a personal academic advisor for my CS degree at Texas State University.
+                        It tracks completed and in-progress courses, maps prerequisite chains across the full degree plan
+                        using a graph engine, computes graduation gaps, and feeds all that structured context to Claude AI
+                        for conversational advising — something a generic chatbot can't do.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tag tag-accent">Python</span>
+                        <span class="tag tag-accent">Claude API</span>
+                        <span class="tag tag-accent">NetworkX</span>
+                        <span class="tag tag-accent">JSON</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-badge">Security</span>
+                        <a href="https://github.com/eduarduque" target="_blank" rel="noopener" class="project-link">GitHub &rarr;</a>
+                    </div>
+                    <h3>Sentinel — AI Connector Security Monitor</h3>
+                    <p>
+                        Scans the domains and services connected to a Claude AI setup and flags security risks in real time.
+                        Checks SSL cert expiry, missing HTTP security headers, known CVEs via the OSV vulnerability database,
+                        and GitHub supply chain signals (archived repos, suspicious commits, ownership changes).
+                        Outputs a 0–100 risk score with SAFE / LOW / MEDIUM / HIGH / CRITICAL bands.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tag tag-accent">Python</span>
+                        <span class="tag tag-accent">OSV API</span>
+                        <span class="tag tag-accent">GitHub API</span>
+                        <span class="tag tag-accent">TLS / SSL</span>
+                        <span class="tag tag-accent">CLI</span>
+                    </div>
+                </div>
+
+                <div class="project-card coming-soon">
+                    <h3>More Projects Coming Soon</h3>
+                    <p>Currently building — check back soon or follow on GitHub to stay updated.</p>
+                    <a href="https://github.com/eduarduque" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">Follow on GitHub</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline">
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Web Development &amp; Administrative Intern</h3>
+                            <span class="timeline-org">XPM</span>
+                        </div>
+                        <span class="timeline-date">Summer 2024 – Summer 2025</span>
+                        <ul>
+                            <li>Balanced technical project work with client-facing communications and project management</li>
+                            <li>Managed digital scheduling and client intake for a remote-first professional team</li>
+                            <li>Optimized office workflow through digital record management and professional client correspondence</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Lead Student Assistant / Service Center Rep</h3>
+                            <span class="timeline-org">Northeast Community College</span>
+                        </div>
+                        <span class="timeline-date">Aug 2023 – Dec 2024</span>
+                        <ul>
+                            <li>Primary face of the Service Center — managed high-volume inquiries from students, parents, and faculty</li>
+                            <li>Coordinated front-desk operations including intake paperwork and departmental routing</li>
+                            <li>Lead Spanish translator, ensuring non-English speaking families had full access to campus services</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Resident Assistant &amp; Office Liaison</h3>
+                            <span class="timeline-org">Northeast Community College</span>
+                        </div>
+                        <span class="timeline-date">Aug 2022 – May 2023</span>
+                        <ul>
+                            <li>Managed administrative duties for a residential hall of 100+ students including emergency response</li>
+                            <li>Assisted Housing Office with large-scale event planning and new student orientations</li>
+                            <li>Maintained 100% accuracy in sensitive student records and incident reporting</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-wrapper">
+                <p class="contact-intro">
+                    I'm open to internships, project collaborations, and opportunities in software development and AI.
+                    Feel free to reach out — I respond fast.
+                </p>
+                <div class="contact-items">
+                    <div class="contact-item">
+                        <span class="contact-label">Email</span>
+                        <a href="mailto:eduarduque_18@hotmail.com">eduarduque_18@hotmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">Phone</span>
+                        <a href="tel:7542324812">754-232-4812</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">Location</span>
+                        <span>San Marcos, TX</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">GitHub</span>
+                        <a href="https://github.com/eduarduque" target="_blank" rel="noopener">github.com/eduarduque</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">LinkedIn</span>
+                        <a href="https://www.linkedin.com/in/eduardo-duque-b726021bb" target="_blank" rel="noopener">Eduardo Duque</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>Eduardo Duque &middot; San Marcos, TX &middot; <a href="https://github.com/eduarduque" target="_blank" rel="noopener">GitHub</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
